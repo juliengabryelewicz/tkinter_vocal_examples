@@ -28,7 +28,6 @@ def listen_microphone():
         if rec.AcceptWaveform(data):
             result = json.loads(rec.Result())
             color_change.change_background_color(result["text"])
-    #color_change.after(8000, listen_microphone)
 
 if __name__ == "__main__":
     color_change = ColorChange()
